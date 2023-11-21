@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title != 'undefined' ? title: 'Recipe-Radar' %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Serif+Old+Uyghur&family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+</head>
+<body>
+  
+  <div class="container-xxl px-md-5 bg-white shadow-lg">
+
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="/img/Recipe.png" width="150" height="70" alt="Dining Table With Various Food Items">
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 25px;">
+        <li><a href="/" class="nav-link px-2 link-danger" style="font-family: Agbalumo;">Home</a></li>
+        <li><a href="/submit-recipe" class="nav-link px-2 link-danger" style="font-family: Agbalumo;">Share</a></li>
+        <li><a href="/login" class="nav-link px-2 link-danger" style="font-family: Agbalumo;">Login</a></li>
+        <li><a href="/register" class="nav-link px-2 link-danger" style="font-family: Agbalumo;">Register</a></li>
+        <li><a href="/logout" class="nav-link px-2 link-danger" style="font-family: Agbalumo;">Logout</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <form method="POST" action="/search" class="search-form" style="position: relative;">
+          <div class="search-icon" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); cursor: pointer;">
+            <i class="bi bi-search"></i>
+          </div>
+          <input type="search" name="searchTerm" class="form-control" placeholder="Search Recipes..." aria-label="Search" style="padding-left: 30px " />
+        </form>
+      </div>                 
+    </header>
+
+    <main>
+      <%- body -%>
+    </main>
+
+    <footer class="py-5" style="color: cornflowerblue; font-weight: bolder; font-size: 20px;">
+      <p style="display: inline;">Build by <p style="display: inline; color: red;">"Team46"</p></p>
+      <p style="display: inline;">&copy; 2023 <p style="display: inline; color: red;">Recipe-Radar</p>. All rights reserved.</p>
+  </footer>  
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

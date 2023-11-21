@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Include your head content here -->
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title text-center" style="font-family: Agbalumo; color: crimson; text-decoration: underline; margin-bottom: 40px;">Login</h1>
+            <form action="/login" method="post">
+              <div class="form-group">
+                <label for="email" style="font-size: 23px; font-weight: bold; color: green;">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" style="margin-bottom: 40px; border: 1px solid black;" placeholder="enter your email..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="password" style="font-size: 23px; font-weight: bold; color: green;">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" style="margin-bottom: 40px; border: 1px solid black;" placeholder="enter your password..." required>
+              </div>
+
+              <div className="d-flex" style="margin-left: 370px; margin-bottom: 20px;">
+                <a href="/forgot">Forgot Password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-info" style="font-weight: bold; width: 50%; margin-left: 25%; margin-bottom: 40px; margin-top: 20px; font-size: 22px;">Login/SignIn</button>
+
+              <div className="d-flex" style="margin-left: 75px;">
+                <p style="font-weight: bold; font-size: 20px;">Don't have an Account? Please <a href="/register">Register</a></p>
+              </div>
+
+            </form>
+            <script>
+              // Check if there is an alert query parameter and display an alert
+              const alertMessage = '<%= alert %>';
+              if (alertMessage) {
+                alert(decodeURIComponent(alertMessage));
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

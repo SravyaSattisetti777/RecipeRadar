@@ -1,0 +1,39 @@
+<!-- reset.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Reset</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title text-center" style="font-family: Agbalumo; color: crimson; text-decoration: underline; margin-bottom: 60px;">Password Reset</h1>
+            <form action="/reset" method="POST">
+              <div class="form-group align-items-center">
+                <label style="font-size: 23px; font-weight: bold; color: green; margin-left: 18%;">New Password:</label>
+                <input type="password" name="newPassword" placeholder="enter new password..." style="margin-bottom: 40px;" required>
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 23px; font-weight: bold; color: green; margin-left: 15%;">Confirm Password:</label>
+                <input type="password" name="confirmPassword" placeholder="confirm password..." style="margin-bottom: 40px;" required>
+              </div>
+
+              <input type="hidden" name="token" value="<%= token %>">
+
+              <button type="submit" class="btn btn-info" style="font-weight: bold; width: 50%; margin-left: 25%; margin-bottom: 40px; margin-top: 20px; font-size: 22px;">Reset Password</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- forgot.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forgot Password</title>
+  <!-- Add your styles and scripts as needed -->
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title text-center" style="font-family: Agbalumo; color: crimson; margin-bottom: 60px; text-decoration: underline;">Forgot Password</h1>
+            <form action="/forgot" method="post">
+              <div class="form-group" style="margin-left: 145px;">
+                <label for="email" style="font-size: 23px; font-weight: bold; color: green;">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" style="margin-bottom: 40px; width: 70%; border: 1px solid black;" placeholder="enter your email..." required>
+              </div>
+
+              <button type="submit" class="btn btn-info" style="font-weight: bold; width: 50%; margin-left: 25%; margin-bottom: 40px; margin-top: 20px; font-size: 22px;">Reset Password</button>
+
+              <div className="d-flex" style="margin-left: 135px;">
+                <p style="font-weight: bold; font-size: 20px; margin-bottom: 40px;">Remembered your password? <a href="/login" style="color: blue;">Login</a></p>
+              </div>
+              
+            </form>
+            <script>
+              const alertMessage = '<%= alert %>';
+              if (alertMessage) {
+                alert(decodeURIComponent(alertMessage));
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
